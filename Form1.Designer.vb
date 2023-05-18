@@ -23,6 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         lstDebug = New ListBox()
+        txtInput = New TextBox()
+        btnExtract = New Button()
         SuspendLayout()
         ' 
         ' lstDebug
@@ -34,16 +36,37 @@ Partial Class Form1
         lstDebug.Size = New Size(120, 94)
         lstDebug.TabIndex = 0
         ' 
+        ' txtInput
+        ' 
+        txtInput.Location = New Point(187, 110)
+        txtInput.Name = "txtInput"
+        txtInput.Size = New Size(100, 23)
+        txtInput.TabIndex = 1
+        ' 
+        ' btnExtract
+        ' 
+        btnExtract.Location = New Point(200, 299)
+        btnExtract.Name = "btnExtract"
+        btnExtract.Size = New Size(75, 23)
+        btnExtract.TabIndex = 2
+        btnExtract.Text = "Button1"
+        btnExtract.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(btnExtract)
+        Controls.Add(txtInput)
         Controls.Add(lstDebug)
         Name = "Form1"
         Text = "Form1"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lstDebug As ListBox
+    Friend WithEvents txtInput As TextBox
+    Friend WithEvents btnExtract As Button
 End Class

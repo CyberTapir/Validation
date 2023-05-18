@@ -1,7 +1,4 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lstDebug.Items.Add(ValidateInteger("hello17world", 0, 20, 5))
-    End Sub
     Public Function ValidateInteger(ByVal InputString As String, ByVal Min As Integer, ByVal Max As Integer, ByVal DefaultVal As Integer) As Integer
         Dim StringInteger As String, TempChar As String
         Dim Counter As Integer, IsADigit As Boolean
@@ -28,4 +25,7 @@
         Return ValidateInteger
     End Function
 
+    Private Sub btnExtract_Click(sender As Object, e As EventArgs) Handles btnExtract.Click
+        lstDebug.Items.Add(ValidateInteger(txtInput.Text, 0, 100, 5))
+    End Sub
 End Class
